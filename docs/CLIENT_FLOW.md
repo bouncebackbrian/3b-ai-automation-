@@ -91,9 +91,9 @@ When the client's business formation is filed or the existing business setup is 
 - A professionally built website, with a defined starter scope such as a responsive one-page launch site, plus separately priced upgrades for additional pages, ecommerce, booking, analytics, or ongoing care.
 - Basic on-page SEO setup and mobile optimization as stated deliverables in the selected package.
 - Optional logo-builder or free domain-provider tools as supplemental DIY resources only; they do not replace 3B Media's custom logo, email setup, or website build.
+- Optional ongoing website care or updates, if offered
 
 Dynadot may provide a domain and eligible included starter tools. Its current site describes a free one-page builder tier with 500 MB storage and a Pro plan shown at $30/year with additional features. Treat provider inclusions, eligibility, prices, and limits as live-vendor details to recheck at purchase; the 3B Media Toolkit remains the 3B service package and clearly identifies third-party tools versus work delivered by 3B Media.
-- Optional ongoing website care or updates, if offered
 
 For an established business that already completed setup, show the offer when the client is ready; do not make formation a prerequisite for media services. Present the Toolkit, optional upgrades, third-party charges, 3B scope, price, timeline, and approval clearly. The client may choose the full package, selected services, or none. Domain search results are time-sensitive and are not a reservation. Before registration, show the exact domain, term, price, renewal price where available, privacy options, registrant contact, included-tool limits, and account ownership; require explicit client authorization and payment. Register domains in the client's authorized account where supported, never silently in a 3B-owned account. Store Dynadot API credentials only in approved server-side secret storage; do not expose them in the browser, logs, or customer-visible records.
 
