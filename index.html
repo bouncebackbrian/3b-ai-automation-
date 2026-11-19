@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10120f">
+  <meta name="description" content="3B AI Business Automation — audit, plan, implement, and measure practical automation for your business.">
+  <title>3B AI Business Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="3B AI Automation home">
+        <span class="brand-mark">3B</span>
+        <span class="brand-name">AI <b>Automation</b><small>BOUNCE BACK. BUILD FORWARD.</small></span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-view="overview"><span class="nav-icon">⌂</span> Overview</button>
+        <button class="nav-link" data-view="audit"><span class="nav-icon">◉</span> Business audit</button>
+        <button class="nav-link" data-view="opportunities"><span class="nav-icon">✳</span> Automation plan</button>
+        <button class="nav-link" data-view="proposal"><span class="nav-icon">▤</span> Proposal & next steps</button>
+        <button class="nav-link" data-view="media"><span class="nav-icon">◈</span> 3B Media launch</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="branch-card">
+          <span class="status-dot"></span>
+          <div><b>Independent 3B service branch</b><small>Automation revenue is tracked separately.</small></div>
+        </div>
+        <button class="reset-link" id="resetData">Reset demo workspace</button>
+        <div class="account-chip"><span class="avatar">3B</span><span><b>Preview workspace</b><small>Demo mode · No sign-in</small></span><span class="chevron">⌄</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="crumb"><span>3B Business Services</span><i>/</i><b id="currentCrumb">Overview</b></div>
+        <div class="top-actions"><span class="preview-badge"><span></span> PREVIEW</span><button class="help-button" title="Help">?</button></div>
+      </header>
+
+      <div class="preview-notice"><span class="notice-icon">i</span><span><b>Interactive product preview</b> · Sign-in, secure 3B ID verification, filing, live AI, payments, and third-party integrations are not connected. Don’t enter sensitive or real customer information.</span></div>
+
+      <section class="view active" id="view-overview">
+        <div class="page-heading">
+          <div><p class="eyebrow">YOUR BUSINESS, BUILT FORWARD</p><h1>Turn busywork into<br><em>room to grow.</em></h1><p class="page-intro">A practical path from business discovery to a custom automation system, with real outcomes tracked along the way.</p></div>
+          <div class="heading-mark"><span>3B</span><small>BUSINESS<br>AUTOMATION</small></div>
+        </div>
+        <div class="identity-strip">
+          <div class="identity-icon">⌂</div><div class="identity-copy"><b>Keep your business records aligned</b><span>Your 3B ID identifies you. Your 3B Business ID keeps audits, proposals, billing, and implementation tied to your business—even if you’re a sole proprietor.</span></div>
+          <button class="button button-outline" data-go="audit">Set up workspace <span>→</span></button>
+        </div>
+        <div class="section-title"><div><p class="eyebrow">YOUR GROWTH WORKSPACE</p><h2>One clear path from audit to results</h2></div><span class="section-note">Built for new and established businesses</span></div>
+        <div class="journey-grid">
+          <button class="journey-card" data-go="audit"><span class="journey-number">01</span><span class="journey-icon warm">◉</span><b>Understand the business</b><span>Map your tools, goals, and repeated work. Unknowns stay marked unknown.</span><span class="card-link">Start the audit <i>↗</i></span></button>
+          <button class="journey-card" data-go="opportunities"><span class="journey-number">02</span><span class="journey-icon teal">✳</span><b>Find practical wins</b><span>Review tailored automation ideas with assumptions and confidence clearly shown.</span><span class="card-link">Explore the plan <i>↗</i></span></button>
+          <button class="journey-card" data-go="proposal"><span class="journey-number">03</span><span class="journey-icon blue">▤</span><b>Approve a clear scope</b><span>See what’s included, what it costs, and what requires your approval.</span><span class="card-link">View next steps <i>↗</i></span></button>
+          <button class="journey-card" data-go="media"><span class="journey-number">04</span><span class="journey-icon purple">◈</span><b>Launch your presence</b><span>Optionally add 3B Media’s custom logo, business email setup, domain, and website.</span><span class="card-link">Explore 3B Media <i>↗</i></span></button>
+        </div>
+        <div class="lower-grid">
+          <article class="panel progress-panel">
+            <div class="panel-heading"><div><p class="eyebrow">WORKSPACE STATUS</p><h3 id="overviewBusinessName">Business setup needed</h3></div><span class="pill pill-muted" id="workspaceStatus">Not started</span></div>
+            <div class="progress-track"><span id="progressBar"></span></div>
+            <div class="progress-foot"><span id="progressLabel">0 of 4 steps complete</span><button class="text-button" data-go="audit">Continue setup →</button></div>
+            <div class="mini-steps"><span class="mini-step current">01 <small>Business</small></span><span class="mini-step">02 <small>Audit</small></span><span class="mini-step">03 <small>Plan</small></span><span class="mini-step">04 <small>Results</small></span></div>
+          </article>
+          <article class="panel principle-panel"><span class="principle-star">✦</span><p class="eyebrow">OUR PROMISE</p><h3>Useful, measurable,<br>and made for your business.</h3><p>AI helps identify and explain opportunities. People review the plan. You approve any price, purchase, filing, or change to your systems.</p><div class="promise-line"><span></span> Bounce Back. Build Forward.</div></article>
+        </div>
+        <footer class="page-footer"><span>3B AI Business Automation <i>·</i> A standalone 3B service line</span><span>Powered by 3Boost identity when connected</span></footer>
+      </section>
+
+      <section class="view" id="view-audit">
+        <div class="view-heading"><div><p class="eyebrow">STEP 01 · DISCOVERY</p><h1>Tell us how your<br><em>business runs.</em></h1><p class="page-intro">Start with what you know. Estimates are welcome; unknowns stay unknown.</p></div><span class="step-pill">01 <i>/</i> 04</span></div>
+        <form id="auditForm" class="audit-layout">
+          <div class="audit-main">
+            <article class="panel form-panel">
+              <div class="panel-heading"><div><p class="eyebrow">BUSINESS WORKSPACE</p><h3>Who are we building for?</h3></div><span class="required-note">Required to continue</span></div>
+              <label class="field-label" for="businessName">Business or working name <span>*</span></label>
+              <input id="businessName" name="businessName" maxlength="100" placeholder="e.g. Silver State Landscaping" required>
+              <div class="form-row">
+                <div><label class="field-label" for="businessType">Business type</label><select id="businessType" name="businessType"><option value="">Choose one</option><option>Established business</option><option>Starting a new business</option><option>Sole proprietor</option><option>LLC</option><option>Corporation</option><option>Partnership</option><option>Other / not sure</option></select></div>
+                <div><label class="field-label" for="industry">Industry</label><select id="industry" name="industry"><option value="">Choose an industry</option><option>Home services / contractor</option><option>Construction / trucking / fleet</option><option>Professional services</option><option>Retail / ecommerce</option><option>Restaurant / hospitality</option><option>Real estate / property management</option><option>Financial / credit services</option><option>Healthcare / wellness</option><option>Other / not sure</option></select></div>
+              </div>
+              <div class="id-callout"><span class="id-symbol">3B</span><div><b>Business records stay with the business</b><p>In the live product, a verified 3B ID connects you to a 3B Business ID. Sole proprietors also get a Business ID. This preview does not collect or verify either ID.</p></div><span class="pill pill-outline">Preview only</span></div>
+            </article>
+            <article class="panel form-panel">
+              <div class="panel-heading"><div><p class="eyebrow">HOW WORK HAPPENS</p><h3>Where does time go?</h3></div><span class="soft-label">Optional · improve your plan</span></div>
+              <div class="metric-grid">
+                <div class="metric-field"><label for="adminHours">Admin hours / week</label><div class="metric-input"><input id="adminHours" type="number" min="0" max="168" placeholder="—"><select id="adminHoursStatus" aria-label="Admin hours data quality"><option>Estimate</option><option>Known</option><option>Unknown</option></select></div></div>
+                <div class="metric-field"><label for="monthlyLeads">New leads / month</label><div class="metric-input"><input id="monthlyLeads" type="number" min="0" placeholder="—"><select id="leadStatus" aria-label="Lead volume data quality"><option>Estimate</option><option>Known</option><option>Unknown</option></select></div></div>
+                <div class="metric-field"><label for="missedCalls">Missed calls / month</label><div class="metric-input"><input id="missedCalls" type="number" min="0" placeholder="—"><select id="missedStatus" aria-label="Missed calls data quality"><option>Estimate</option><option>Known</option><option>Unknown</option></select></div></div>
+                <div class="metric-field"><label for="followupHours">Follow-up hours / week</label><div class="metric-input"><input id="followupHours" type="number" min="0" max="168" placeholder="—"><select id="followupStatus" aria-label="Follow-up hours data quality"><option>Estimate</option><option>Known</option><option>Unknown</option></select></div></div>
+              </div>
+              <label class="field-label" for="tools">What tools do you use today?</label>
+              <input id="tools" name="tools" maxlength="180" placeholder="CRM, scheduling, phone, accounting, email…">
+              <label class="field-label" for="painPoint">What’s the most frustrating repeated task?</label>
+              <textarea id="painPoint" name="painPoint" maxlength="500" rows="3" placeholder="Describe the process and where it gets stuck."></textarea>
+              <label class="field-label" for="goal">What would you most like to improve?</label>
+              <textarea id="goal" name="goal" maxlength="300" rows="2" placeholder="Your goal helps us prioritize the plan."></textarea>
+            </article>
+            <div class="form-actions"><button type="button" class="button button-quiet" data-go="overview">Save and exit</button><button type="submit" class="button button-primary">Create my opportunity preview <span>→</span></button></div>
+          </div>
+          <aside class="audit-side">
+            <div class="side-card side-highlight"><span class="spark">✦</span><p class="eyebrow">NO GUESSWORK</p><h3>Every number has a source.</h3><p>Mark each metric as known, estimated, or unknown. The plan will show what it assumes and where confidence is limited.</p><div class="legend"><span><i class="dot known"></i>Known</span><span><i class="dot estimate"></i>Estimate</span><span><i class="dot unknown"></i>Unknown</span></div></div>
+            <div class="side-card"><p class="eyebrow">WHAT HAPPENS NEXT</p><div class="side-timeline"><span class="timeline-dot active"></span><div><b>Business audit</b><small>Map work and goals</small></div><span class="timeline-dot"></span><div><b>Opportunity plan</b><small>Review practical options</small></div><span class="timeline-dot"></span><div><b>Human review</b><small>Confirm scope and price</small></div><span class="timeline-dot"></span><div><b>Implementation</b><small>Only after approval</small></div></div></div>
+            <div class="privacy-mini"><span>▣</span>Do not enter passwords, API keys, SSNs, tax IDs, or payment details in this preview.</div>
+          </aside>
+        </form>
+      </section>
+
+      <section class="view" id="view-opportunities">
+        <div class="view-heading"><div><p class="eyebrow">STEP 02 · RECOMMENDATIONS</p><h1>Your automation<br><em>opportunity plan.</em></h1><p class="page-intro">A first-pass preview from the information you shared. A 3B reviewer must confirm fit, scope, cost, and assumptions.</p></div><span class="step-pill">02 <i>/</i> 04</span></div>
+        <div class="summary-banner"><div class="summary-symbol">✳</div><div><b id="planSummaryTitle">Complete the audit to create your plan</b><span id="planSummaryText">Your recommendations will appear here once business discovery is complete.</span></div><button class="button button-primary" data-go="audit">Open business audit →</button></div>
+        <div class="section-title"><div><p class="eyebrow">SUGGESTED STARTING POINTS</p><h2>Opportunities to review</h2></div><span class="pill pill-outline">Preview · not verified</span></div>
+        <div class="opportunity-list" id="opportunityList"><article class="opportunity-card placeholder"><span class="opportunity-number">—</span><div><b>Recommendations appear after your audit</b><p>We won’t invent labor cost, lost revenue, or ROI when you haven’t provided enough information.</p></div><span class="confidence">Awaiting audit</span></article></div>
+        <div class="assumptions-panel"><span>i</span><div><b>How to read this plan</b><p>These suggestions are directional. The live system should label customer facts, estimates, unknowns, and AI assumptions separately. No funding, revenue, or savings outcome is guaranteed.</p></div></div>
+        <div class="section-actions"><button class="button button-quiet" data-go="audit">← Edit audit</button><button class="button button-primary" data-go="proposal">Review proposal steps →</button></div>
+      </section>
+
+      <section class="view" id="view-proposal">
+        <div class="view-heading"><div><p class="eyebrow">STEP 03 · SCOPE & APPROVAL</p><h1>Clear scope.<br><em>Your call.</em></h1><p class="page-intro">Review a proposed starting scope. This preview does not create a contract, quote, invoice, or payment.</p></div><span class="step-pill">03 <i>/</i> 04</span></div>
+        <div class="proposal-layout">
+          <article class="panel proposal-main">
+            <div class="proposal-label"><span class="proposal-icon">▤</span><span><small>PROPOSED SERVICE</small><b>3B AI Automation Discovery & Quick Win</b></span><span class="pill pill-muted">Draft preview</span></div>
+            <div class="proposal-section"><p class="eyebrow">WHY THIS MAY FIT</p><p id="proposalWhy">Complete your business audit to draft a relevant scope. A 3B reviewer would confirm the recommendation before it is sent.</p></div>
+            <div class="proposal-section"><p class="eyebrow">POSSIBLE DELIVERABLES</p><ul class="deliverable-list"><li><span>✓</span>Process map for one priority workflow</li><li><span>✓</span>Automation design and implementation plan</li><li><span>✓</span>Defined handoff, escalation, and test checklist</li><li><span>✓</span>Baseline measures for later results tracking</li></ul></div>
+            <div class="proposal-section"><p class="eyebrow">PRICING & TIMELINE</p><div class="pricing-placeholder"><span>Price</span><b>Set by authorized 3B reviewer</b><small>No price or commitment is created in this preview.</small></div><div class="pricing-placeholder"><span>Timeline</span><b>Confirmed after requirements review</b><small>Depends on tools, access, and approved scope.</small></div></div>
+            <div class="proposal-footer"><span>AI can draft a recommendation. A person approves scope, price, and customer-facing proposal.</span><button class="button button-quiet" data-go="opportunities">Back to plan</button></div>
+          </article>
+          <aside class="proposal-sidebar">
+            <div class="side-card"><p class="eyebrow">APPROVAL GATES</p><div class="gate"><span>1</span><div><b>3B review</b><small>Fit, assumptions, scope, price</small></div><em>Required</em></div><div class="gate"><span>2</span><div><b>Your approval</b><small>Accept or request changes</small></div><em>Required</em></div><div class="gate"><span>3</span><div><b>Payment setup</b><small>Through shared 3B Payments</small></div><em>After approval</em></div><div class="gate"><span>4</span><div><b>Onboarding</b><small>Secure access flow only</small></div><em>Next</em></div></div>
+            <div class="side-card note-card"><span>↗</span><p><b>Already in business development?</b><small>Your business profile can be handed over with consent. Automation remains its own 3B service branch, with separate scope and revenue reporting.</small></p></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-media">
+        <div class="view-heading"><div><p class="eyebrow">OPTIONAL · 3B MEDIA GROUP</p><h1>Build your business<br><em>presence online.</em></h1><p class="page-intro">After setup—or whenever you’re ready—3B Media Group can deliver your brand and online launch toolkit.</p></div><span class="media-stamp">3B<br><small>MEDIA</small></span></div>
+        <div class="media-hero"><div class="media-copy"><p class="eyebrow">THE SMALL BUSINESS ONLINE LAUNCH TOOLKIT</p><h2>One team for your<br>brand and launch.</h2><p>3B Media Group creates the customer-facing deliverables. Domain providers may offer starter tools, but they don’t replace the custom work 3B Media performs.</p><button class="button button-primary" id="mediaRequest">Request a 3B Media consultation <span>→</span></button><small class="media-feedback" id="mediaFeedback" aria-live="polite"></small></div><div class="media-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core"><span>3B</span><small>BUILD<br>FORWARD</small></div><span class="orbit-tag tag-logo">LOGO</span><span class="orbit-tag tag-domain">DOMAIN</span><span class="orbit-tag tag-site">WEBSITE</span><span class="orbit-tag tag-email">EMAIL</span></div></div>
+        <div class="media-service-grid">
+          <article class="media-service"><span class="media-service-icon">✦</span><p class="eyebrow">01 · BRAND</p><h3>Custom logo & identity</h3><p>Logo, colors, typography, and a usable brand handoff built for your company.</p><span class="service-owner">Delivered by 3B Media Group</span></article>
+          <article class="media-service"><span class="media-service-icon">⌘</span><p class="eyebrow">02 · DOMAIN</p><h3>Domain search & setup</h3><p>Search and setup coordination. Dynadot is a possible registrar; availability and price must be confirmed live.</p><span class="service-owner">Domain purchased with your approval</span></article>
+          <article class="media-service"><span class="media-service-icon">✉</span><p class="eyebrow">03 · EMAIL</p><h3>Business email setup</h3><p>Choose an email provider and connect your domain, mailboxes, and DNS records as scoped.</p><span class="service-owner">Configured by 3B Media Group</span></article>
+          <article class="media-service"><span class="media-service-icon">▣</span><p class="eyebrow">04 · WEBSITE</p><h3>Professional website build</h3><p>Responsive launch site with clear upgrade paths for more pages, bookings, or online sales.</p><span class="service-owner">Built by 3B Media Group</span></article>
+        </div>
+        <div class="media-note"><span>i</span><p><b>Separate services, clear approval.</b> 3B Media scope, price, timeline, domain registration, and any third-party charges are reviewed with you before purchase. Your domain should be held in your authorized account where supported.</p></div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
